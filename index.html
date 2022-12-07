@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+</head>
+
+<body>
+<div>
+    <div>
+        <label>Enter A value</label>
+        <input id='a' type="text"/>
+        <br>
+    </div>
+    <div>
+        <label>Enter B value</label>
+        <input id='b' type="text"/>
+        <br><br>
+    </div>
+    <div>
+        <button onclick="addition()">Add</button>
+        <button onclick="subtraction()">Sub</button>
+        <button onclick="multiplication()">Mul</button>
+        <button onclick="division()">Div</button>
+        <br>
+    </div>
+    <div>
+        <p id="result">Result is:</p>
+    </div>
+    <script>
+        function addition(){
+            var a=document.getElementById('a').value;
+            var b=document.getElementById('b').value;
+            if(!isNaN(a)&&!isNaN(b)){
+                var result=parseInt(a)+parseInt(b);
+                document.getElementById('result').innerHTML="Addition of A, B is "+result;
+                }
+            else
+            {
+                document.getElementById('result').innerHTML='Please Enter Integers only';
+            }
+        }
+        function subtraction(){
+            var a=document.getElementById('a').value;
+            var b=document.getElementById('b').value;
+            if(!isNaN(a)&&!isNaN(b)){
+                var result=parseInt(a)-parseInt(b);
+                document.getElementById('result').innerHTML="Subtraction of A,B is "+result;
+                }
+            else
+            {
+                document.getElementById('result').innerHTML='Please Enter Integers only';
+            }
+        }
+        function multiplication(){
+            var a=document.getElementById('a').value;
+            var b=document.getElementById('b').value;
+            if(!isNaN(a)&&!isNaN(b)){
+                var result=parseInt(a)*parseInt(b);
+                document.getElementById('result').innerHTML="Multiplication of A,B is "+result;
+                }
+            else
+            {
+                document.getElementById('result').innerHTML='Please Enter Integers only';
+            }
+        }
+        function division(){
+            var a=document.getElementById('a').value;
+            var b=document.getElementById('b').value;
+            if(!isNaN(a)&&!isNaN(b)){
+                var result=parseInt(a)/parseInt(b);
+                document.getElementById('result').innerHTML="division of A, B is "+result;
+                }
+            else
+            {
+                document.getElementById('result').innerHTML='Please Enter Integers only';
+            }
+        }
+    </script>
+</div>
+</body>
+
+</html>
